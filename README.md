@@ -12,6 +12,7 @@ Sprinboot Microservices.
  
 -----------------------------------------------------------------------------
 ## Potential Features for DebitCard Management.
+https://chatgpt.com/c/2f986c80-5d45-4ea9-aa2b-1ec05898437a
 
 1. User Registration and Authentication
 - POST /api/v1/register
