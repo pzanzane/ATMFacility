@@ -1,5 +1,9 @@
 package com.atm.errors;
 
+
+import lombok.Getter;
+
+@Getter
 public class ErrorDetails {
 
     private final int errorCode;
@@ -10,5 +14,4 @@ public class ErrorDetails {
         this.errorCode = errorCode;
         this.message = message;
     }
-
 }
