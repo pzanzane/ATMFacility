@@ -4,22 +4,22 @@ import com.atm.controllers.SignUpController;
 import com.atm.entities.User;
 import com.atm.errors.SignupException;
 import com.atm.services.UserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 
 
 public class SignUpControllerImpl implements SignUpController {
 
-    private static final Logger logger = LoggerFactory.getLogger(SignUpControllerImpl.class);
+    private static final Logger logger = LogManager.getLogger(SignUpControllerImpl.class);
 
     @Autowired
     private UserService userService;
 
     @Override
     public ResponseEntity<String> signUp(User user) {
-
+        logger.error("In Signup API");
         try {
             userService.registerUser(user);
             return ResponseEntity.ok("New user signup successfully");
